@@ -16,6 +16,9 @@ use weather7days\constant\constant;
 
 $obj = new index();
 echo '<pre>';
+// 当前地点当前天气
+echo '<iframe scrolling="no" src="https://tianqiapi.com/api.php?style=tw&skin=pitaya" frameborder="0" width="300" height="500" allowtransparency="true"></iframe>';
+echo '<br/>';
 foreach (constant::getcCityId() as $date => $city){
     echo "日期: ".$date;
     echo '<br/>';
@@ -50,7 +53,7 @@ foreach (constant::getcCityId() as $date => $city){
         unset($flag);
         unset($ret);
     }
-    echo "==============================一天结束==============================";
+    echo "==============================".$date. "的一天结束==============================";
     echo '<br/>';
 }
 echo '</pre>';
